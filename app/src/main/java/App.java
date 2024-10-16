@@ -1,12 +1,10 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-import com.recipeapp.ui.Recipe;
-import com.recipeapp.ui.RecipeUI;
-
+import com.recipeapp.datahandler.CSVDataHandler;
 import com.recipeapp.datahandler.DataHandler;
 import com.recipeapp.datahandler.JSONDataHandler;
-import com.recipeapp.datahandler.CSVDataHandler;
+import com.recipeapp.ui.RecipeUI;
 
 public class App {
 
