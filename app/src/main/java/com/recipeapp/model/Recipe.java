@@ -1,4 +1,4 @@
-package com.recipeapp.ui;
+package com.recipeapp.model;
 
 import java.util.ArrayList;
 

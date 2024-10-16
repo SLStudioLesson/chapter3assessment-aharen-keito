@@ -3,7 +3,7 @@ package com.recipeapp.datahandler;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import com.recipeapp.ui.Recipe;
+import com.recipeapp.model.Recipe;
 
 public class JSONDataHandler implements DataHandler {
 

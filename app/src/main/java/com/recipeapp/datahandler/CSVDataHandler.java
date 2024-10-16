@@ -7,8 +7,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import com.recipeapp.ui.Ingredient;
-import com.recipeapp.ui.Recipe;
+import com.recipeapp.model.Ingredient;
+import com.recipeapp.model.Recipe;
 
 public class CSVDataHandler implements DataHandler {
     private String filePath;
@@ -47,7 +47,7 @@ public class CSVDataHandler implements DataHandler {
                     Recipe recipe = new Recipe(recipeName, ingredients);
                     array.add(recipe);
 
-                }else{
+                } else {
                     System.out.println("No recipes available.");
                 }
             }
@@ -61,16 +61,17 @@ public class CSVDataHandler implements DataHandler {
     public void writeData(Recipe recipe) throws IOException {
         String filePath = "C:\\Users\\user\\Documents\\アセスメント\\chapter3assessment-aharen-keito\\app\\src\\main\\resources\\recipes.csv";
         String add = recipe.getName();
-        try(BufferedWriter writer = new BufferedWriter(new FileWriter(filePath, true))){
-            // recipe オブジェクトから材料リストを取得し、その中の各 Ingredient をループ　
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath, true))) {
+            // recipe オブジェクトから材料リストを取得し、その中の各 Ingredient をループ
             for (Ingredient ingredient : recipe.getIngredients()) {
                 add += "," + ingredient.getName(); // 材料をカンマ区切り
-            writer.write(add);
-            writer.newLine(); // 改行
-        } }catch (IOException e) {
-          System.out.println("Recipe not added successfully.");
+                writer.write(add);
+                writer.newLine(); // 改行
+            }
+        } catch (IOException e) {
+            System.out.println("Recipe not added successfully.");
         }
-    
+
     }
 
     @Override

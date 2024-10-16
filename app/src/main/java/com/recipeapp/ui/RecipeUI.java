@@ -8,6 +8,8 @@ import java.util.ArrayList;
 
 import com.recipeapp.datahandler.CSVDataHandler;
 import com.recipeapp.datahandler.DataHandler;
+import com.recipeapp.model.Ingredient;
+import com.recipeapp.model.Recipe;
 
 public class RecipeUI {
     private BufferedReader reader;
